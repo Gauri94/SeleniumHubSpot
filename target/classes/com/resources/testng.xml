@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite thread-count="1" name="HubSpot Application Test Automation Suite" parallel = "tests" verbose = "3">
+
+  <test name="HubSpot Application Chrome Test Cases" parallel = "methods" thread-count = "1">
+  	<parameter name = "browser" value = "chrome" />
+    	<classes>
+       		<class name="com.testcases.LoginPageTest" />
+    	</classes>
+  	</test>
+  	
+  <test name="HubSpot Application FireFox Test Cases" parallel = "methods" thread-count = "1">
+  	<parameter name = "browser" value = "FF" />
+    	<classes>
+       		<class name="com.testcases.LoginPageTest" />
+    	</classes>
+  	</test>
+  		
+</suite>
